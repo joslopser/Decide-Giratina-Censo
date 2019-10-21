@@ -13,6 +13,12 @@ from rest_framework.status import (
 from base.perms import UserIsStaff
 from .models import Census
 
+from django.views.generic import TemplateView
+
+#class CensusView(TemplateView):
+#    template_name = 'census/census.html'
+
+
 
 class CensusCreate(generics.ListCreateAPIView):
     permission_classes = (UserIsStaff,)
